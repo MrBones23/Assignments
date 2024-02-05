@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Click Counter</title>
+    <link rel="stylesheet" type="text/css" href="chapter04CSS.css">
+</head>
+<body>
+    <header>
+        <ul class="stickyNav">
+            <li><a class="active" href="/index.html">Home Page</a></li>
+            <li><a href="/DemoHTMLPage_1.html">Demo HTML & CSS assignment</a></li>
+            <li><a href="/MoreCSS/index.html">More CSS assignment</a></li>
+        </ul>
+    </header>
+
+    <h1>Click Counter</h1>
+    <button class="baseButton" id="clickButton" onclick="document.body.style.backgroundColor = 'red'; handleClickRed()" onmouseover="handleHoverCountRed()">RED</button>
+    <p id="clickCountRed">RED count: 0</p>
+    <p id="hoverCountRed">Hover count: 0</p>
+
+
+	<button class="baseButton"  onclick="document.body.style.backgroundColor = 'blue'; handleClickBlue()" onmouseover="handleHoverCountBlue()">BLUE</button>
+    <p id="clickCountBlue">BLUE count: 0</p>
+    <p id="hoverCountBlue">Hover count: 0</p>
+
+    <button class="baseButton" id="clickButton" onclick="document.body.style.backgroundColor = 'green'; handleClickGreen()" onmouseover="handleHoverCountGreen()">GREEN</button>
+    <p id="clickCountGreen">GREEN count: 0</p>
+    <p id="hoverCountGreen">Hover count: 0</p>
+
+
+	<!-- <button id="clickButton" onclick="document.body.style.backgroundColor = 'bl';">Click me</button>
+    <p id="clickCount">Click count: 0</p> -->
+
+    <script type="text/javascript" src="chapter04JavaScript.js"></script>
+</body>
+</html>
