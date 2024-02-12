@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array Sorting Example</title>
+    <script type="text/javascript" src="sortingAssignmentJavascript.js"></script>
+    <style>
+    
+    .stickyNav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        float: left;
+        
+      }
+      
+      ul.stickyNav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+        border-radius: 25px;
+      }
+      li.stickyNav {
+        float: left;
+      }
+      li a:hover {
+        background-color: #9626ca;
+      }
+      
+      .active {
+        background-color: #eb9c35;
+      }
+      
+      </style>
+    </head>
+<body>
+
+    <header>
+        <ul class="stickyNav">
+            <ul class="stickyNav">
+                <li><a class="active" href="/index.html">Home Page</a></li>
+                <li><a href="/assignmentPage.html">Assignments</a></li>
+            </ul>
+            
+        </ul>
+    </header>
+
+    <h1>Sorting String Arrays</h1>
+    <p>Enter two or more names in the field below,
+    and the sorted list of names will appear in the
+    textarea.</p>
+    <form name="theform">
+    Name:
+    <input type="text" name="newname" size="20" onkeydown="if(event.keyCode===13) {SortNames(); event.preventDefault();}">
+    <!-- <input type="button" name="addname" value="AddNew"
+    onclick="SortNames();"> -->
+    <br/>
+    <h2>Sorted Names</h2>
+    <textarea cols="60" rows="10" name="sorted">
+    The sorted names will appear here.
+    </textarea>
+    </form>
+</body>
+</html>
