@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Click Counter</title>
+    <link rel="stylesheet" type="text/css" href="prime.css">
+    <script type="text/javascript" src="prime.js"></script>
+</head>
+<body>
+    <header>
+        <ul class="stickyNav">
+            <li><a class="active" href="/index.html">Home Page</a></li>
+            <li><a href="/assignmentPage.html">Assignments</a></li>
+        </ul>
+    </header>
+
+    <h1>Enter a number that you want us to find the primes up to</h1>
+    <div>
+        <form name="numberForm">
+            Number to find primes up to:
+            <input type="text" id="upToNumber" size="20"><br>
+            <button onclick="createPrimeAndNonPrimeLst(); event.preventDefault();">START</button>
+        </form>
+
+    </div>
+    <div id="primeListDivCont">
+        <h2>Prime List</h2>
+        <ol id="primeListCont"></ol>
+        <button onclick="sumPrime(); event.preventDefault();">SUM</button>
+        <p id="primeTotal">Count: 0</p>
+
+
+        
+    </div>
+    <div id="nonPrimeListDivCont">
+        <h2>Non Prime List</h2>
+        <ol id="nonPrimeListCont"></ol>
+        <button onclick="sumNonPrime(); event.preventDefault();">SUM</button>
+        <p id="nonPrimeTotal">Count: 0</p>
+
+        
+    </div>
+    
+    
+</body>
+</html>

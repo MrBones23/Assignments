@@ -1,0 +1,41 @@
+#primeListDivCont{
+    float: left;
+    margin-left: 200px;
+}
+#nonPrimeListDivCont{
+    float: right;
+    margin-right: 200px;
+}
+
+/* nav bar styling */
+.stickyNav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: left;
+    
+  }
+  
+  ul.stickyNav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    border-radius: 25px;
+  }
+  li.stickyNav {
+    float: left;
+  }
+  li a:hover {
+    background-color: #9626ca;
+  }
+  
+  .active {
+    background-color: #eb9c35;
+  }
