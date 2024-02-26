@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+      /* Progress bar styling */
+      .wrapper{
+        width: 500px;
+        margin: 0 auto;
+      }
+      .progressBar{
+        width: 100%;
+        background-color: gray;
+        padding: 3px;
+        border-radius: 3px;
+      }
+      .progressBarFill{
+        height: 22px;
+        display: block;
+        background-color: green; 
+        border-radius: 3px;
+        width: 0;
+        transition: width 500ms ease-in-out;
+      }
+
+      /* NavBar Styling */
+      .stickyNav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        float: left;
+        
+      }
+      
+      ul.stickyNav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+        border-radius: 25px;
+      }
+      li.stickyNav {
+        float: left;
+      }
+      li a:hover {
+        background-color: #9626ca;
+      }
+      
+      .active {
+        background-color: #eb9c35;
+      }
+
+
+    </style>
+    <script>
+    $(document).ready(function(){
+      //changes the background color to yellow when the cursor enters the div
+      $("div").mouseenter(function(){
+        $(this).css("background-color", "yellow");
+      });  
+      //changes the background color to white when the cursor leaves the div
+      $("div").mouseleave(function(){
+        $(this).css("background-color", "white");
+      });
+      //fades out the first div when it's corresponding button is clicked
+      $("#div1But").click(function(){
+        $("#div1").fadeOut("slow");
+      });
+      //fades out the second div when it's corresponding button is clicked
+      $("#div2But").click(function(){
+        $("#div2").fadeOut("slow");
+      });
+      //fades out the third div when it's corresponding button is clicked
+      $("#div3But").click(function(){
+        $("#div3").fadeOut("slow");
+      });
+      /* performs the accordion function */
+      $(function() {
+        $("#accordion").accordion();
+      });
+      /* Performs the progress bar code */
+      var size = 0;
+      var interval = setInterval(function(){
+        size = size + 5;
+        $(".progressBarFill").css("width", size + "%");
+        if(size >= 100){
+          clearInterval(interval);
+        }
+      }, 1000);
+
+    });
+    </script>
+  </head>
+<body>
+  <header>
+    <ul class="stickyNav">
+        <li><a class="active" href="/index.html">Home Page</a></li>
+        <li><a href="/assignmentPage.html">Assignments</a></li>
+    </ul>
+  </header>
+  <h1>Welcome to My Homepage</h1>
+
+  <p>This is a paragraph.</p>
+
+  <form>
+    <label>Pick a date.</label>
+    <input type="date" id="birthday" name="birthday">
+    <input type="submit">
+  </form><br><br>
+  <div id="accordion">
+     
+    <h3>Section 1</h3>
+    <div class="panel" id="div1" style="border: 1px solid black;">
+      <p>A paragraph in a div.</p>
+      <p>Another paragraph in a div.</p>
+      <button id="div1But">fade div 1</button><br><br>
+    </div>
+    
+
+     
+    <h3>Section 2</h3>
+    <div class="panel" id="div2" style="border: 1px solid black;">
+      <p>A paragraph in another div.</p>
+      <p>Another paragraph in another div.</p>
+      <button id="div2But">fade div 2</button><br><br>
+    </div>
+    
+
+    
+    <h3>Section 3</h3>
+    <div class="panel" id="div3" style="border: 1px solid black;">
+      <p>A paragraph in another div.</p>
+      <p>Another paragraph in another div.</p>
+      <button id="div3But">fade div 3</button><br><br>
+    </div>
+  </div>
+  
+  <div class="wrapper">
+    <br>
+    <div class="progressBar">
+      <span class="progressBarFill"></span>
+    </div>
+    <br>  
+  </div>
+
+  
+  
+
+</body>
+</html>
