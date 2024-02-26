@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Displaying Keypresses</title>
+<style>
+    /* NavBar Styling */
+    .stickyNav li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      float: left;
+      
+    }
+    
+    ul.stickyNav {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      position: -webkit-sticky; /* Safari */
+      position: sticky;
+      top: 0;
+      border-radius: 25px;
+    }
+    li.stickyNav {
+      float: left;
+    }
+    li a:hover {
+      background-color: #9626ca;
+    }
+    
+    .active {
+      background-color: #eb9c35;
+    }
+
+
+  </style>
+<script type="text/javascript">
+function displayKey(e) {
+    // which key was pressed?
+    if (e.keyCode) {
+        var keycode = e.keyCode;
+    } else {
+        var keycode = e.which;
+    }
+    character = String.fromCharCode(keycode);
+    // find the object for the destination paragraph
+    var keysParagraph = document.getElementById('keys');
+
+    // Additional functionality
+    if (character.toLowerCase() === 'a' || character.toLowerCase() === 'e' || character.toLowerCase() === 'i' || character.toLowerCase() === 'o' || character.toLowerCase() === 'u') { // Check if the pressed key is a vowel
+        character = character.toUpperCase(); 
+    } else if (character.toLowerCase() === 'r') { 
+        document.body.style.backgroundColor = 'red'; 
+        document.body.style.color = 'white'; 
+    } else if (character.toLowerCase() === 'g') { 
+        document.body.style.backgroundColor = 'green'; 
+        document.body.style.color = 'white'; 
+    } else if (character.toLowerCase() === 'b') { 
+        document.body.style.backgroundColor = 'blue'; 
+        document.body.style.color = 'white'; 
+    }
+
+    // add the character to the paragraph
+    keysParagraph.innerHTML += character;
+}
+</script></head>
+<body onkeypress="displayKey(event)">
+    <header>
+        <ul class="stickyNav">
+            <li><a class="active" href="/index.html">Home Page</a></li>
+            <li><a href="/assignmentPage.html">Assignments</a></li>
+        </ul>
+      </header>
+<h1>Displaying Typed Characters</h1>
+<p>This document includes a simple script that displays
+the keys you type as a new paragraph below. Type a few keys
+to try its. </p>
+<div id="keys"></div>
+</body>
+</html>
