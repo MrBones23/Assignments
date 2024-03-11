@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hangman Game</title>
+<link rel="stylesheet" href="handleBarsCSS.css">
+</head>
+<body>
+    <header>
+        <ul class="stickyNav">
+        <li><a href="/index.html">Home Page</a></li>
+        <li><a href="/assignmentPage.html">Assignments</a></li>
+        <li><a class="active" href="/HandleBarsAssignment/handleBarsHTML.html">Handlebars Assignment</a></li>
+        </ul>
+    </header>
+    <div class="page-wrap">
+        <h1>Handlebars Tutorial</h1>
+        <div id="pets-container"></div>
+      </div>
+      
+      <script id="petsTemplate" type="text/x-handlebars-template">
+      {{#each pets}}
+        <div class="pet">
+          <div class="photo-column">
+            <img src="{{photo}}">
+          </div>
+      
+          <div class="info-column">
+            <h2>{{name}} <span class="species">({{species}})</span></h2>
+      
+            <p>Age: {{calculateAge birthYear}}</p>
+      
+            {{#if favFoods}}
+            <h4 class="headline-bar">Favorite Foods</h4>
+            <ul class="favorite-foods">
+              {{#each favFoods}}
+                <li>{{{this}}}</li>
+              {{/each}}
+            </ul>
+            {{/if}}
+      
+          </div>
+        </div>
+      {{/each}}
+      </script>
+    
+      <script src="HandleBarsFile.js"></script>
+    <script src="handleBarsJS.js"></script>
+    
+</body>
+</html>
