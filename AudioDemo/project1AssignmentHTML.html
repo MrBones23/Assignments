@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audio Player</title>
+<link rel="stylesheet" href="project1AssignmentCSS.css">
+</head>
+<body>
+  
+  <header>
+    <ul class="stickyNav">
+      <li><a href="/index.html">Home Page</a></li>
+      <li><a href="/assignmentPage.html">Assignments</a></li>
+      <li><a class="active" href="/Project1Assignment/project1AssignmentHTML.html">Audio demo Assignment</a></li>
+  </ul>
+  </header>
+
+  <h2>This is Antonio Vivaldi's - The Four Seasons, “Spring”</h2>
+<div id="audio-container">
+  <audio id="audio-player" controls>
+    <source src="VivaldisFourSeasons-SpringPart-1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <div id="playlist"></div>
+</div>
+
+<div id="controls">
+  <button id="rewind-btn">Rewind 5s</button>
+  <button id="play-pause-btn" onclick="togglePlayPause()">Play</button>
+  <button id="forward-btn">Forward 5s</button>
+</div>
+  
+<div id="add-DeleteBtnsDiv">
+    
+    <button  class="playlist-button-Add-Delete" onclick="addTitleAtCurrentTime()">Add Title</button>
+    <button class="playlist-button-Add-Delete" onclick="removeCurrentTitle()">Remove current Title</button>
+  
+</div>
+
+<div id="current-time"></div>
+
+<script src="project1AssignmentJavascript.js"></script>
+</body>
+</html>
