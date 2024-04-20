@@ -1,0 +1,79 @@
+.activeForAssignment {
+    background-color: #20864c;
+}
+
+/* main NavBar Styling (our personal website styling) */
+.stickyNav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: left;
+}
+      
+ul.stickyNav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    border-radius: 25px;
+}
+li.stickyNav {
+    float: left;
+}
+li a:hover {
+    background-color: #9626ca;
+}
+      
+.active {
+    background-color: #eb9c35;
+}
+
+/* secondary nav bar (for the assignment navigation*/
+.stickyNav2 li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: center;
+}
+      
+ul.stickyNav2 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    border-radius: 25px;
+}
+li.stickyNav2 {
+    float: left;
+}
+
+
+/* Accordion styling*/
+#player-list .ui-accordion-header.ui-state-active {
+    background-color: #20864c;
+    color: white; /* Optional: Set text color to white for better contrast */
+}
+    /* CSS for aside element in acc.*/
+#player-picture {
+    width: 200px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Add space between picture and player info */
+    float: right;
+}
+
+#player-image {
+    width: 100%;
+    height: auto;
+}

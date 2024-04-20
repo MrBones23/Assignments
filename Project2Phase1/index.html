@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection Web App - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <ul class="stickyNav">
+            <li><a href="/index.html">Home Page</a></li>
+            <li><a href="/assignmentPage.html">Assignments</a></li>
+            <li><a class="active" href="/ProjectTwoPhaseOneAssignment/search.html">Project two Phase one Assignment</a></li>
+          </ul>
+          <br>
+          <ul class="stickyNav2">
+            <li><a class="activeForAssignment" href="index.html">Home page of this assignment</a></li>
+            <li><a href="stats.html">Stats</a></li>
+            <!-- <li><a href="stats.html">Stats</a></li> -->
+            <!-- <li><a href="about.html">About</a></li> -->
+          </ul>  
+    </header>
+    <main>
+        <h1>Welcome to My Collection Web App</h1>
+        <p>This is the home page of the collection web app.</p>
+        <p>This API provides instant access to the latest data for all operations and players in the NHL. 
+            It features scores, odds, bookmakers’ stats, standings, and historical data. 
+            However, there will be three error calls for specific players: <br><br>Jerad Rosburg(Id: 4712026)<br><br>Artyom Grushnikov(Id: 4895340) <br><br>Chase Wheatcroft(Id: 5137011)<br><br> 
+            This is because the api call that gets general information for players on the team, such as their id's which are used to get more detailed information, gives incorrect id's for 3 of the players on the team, resulting in 3 errors being caused when trying to get specific information about those players</p>
+        <!-- Add more content if needed -->
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
